@@ -1,0 +1,53 @@
+.container-video {
+    /*Ajuste a largura e altura desejadas aqui*/
+    width: auto;
+    height: auto;
+    position: relative;
+}
+
+.container-video > .bg-video{
+    margin-top: -35px;
+    padding: 0;
+    overflow-x: hidden; /* Esconde o scroll horizontal */
+    background-size: cover; /* Ajusta a imagem para cobrir o fundo sem distorção */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-position: center; /* Centraliza a imagem no fundo */
+}
+
+.container-video > .bg-video > video {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    height: 850px;
+    margin-top: -25px;
+}
+
+.flag{
+	max-height: 25px;
+	max-width: 25px;
+	margin-top: auto;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+/* Reseta o estilo padrão do link */
+a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Herda a cor do texto */
+    background: none; /* Remove o fundo */
+}
+
+/* Remove qualquer fundo ao passar o mouse */
+a:hover, a:focus, a:active {
+    background-color: transparent; /* Remove o fundo */
+    color: inherit; /* Mantém a cor do texto */
+    outline: none; /* Remove o contorno */
+    border: none; /* Remove qualquer borda */
+}
+
+/* Opcional: remove o contorno quando o link está focado */
+a:focus {
+    outline: none; /* Remove o contorno */
+}

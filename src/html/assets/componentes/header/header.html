@@ -3,46 +3,43 @@
 <header class="br-header mb-4" id="header" data-sticky="data-sticky">
   <div class="container-lg">
     <div class="header-top">
-      <div class="header-logo"><img src="../img/receita-federal-logo.png" alt="logo"/><span class="br-divider vertical mx-half mx-sm-1"></span>
-        <div class="header-sign">GENDEC - General Declaration</div>
+      <div class="header-logo">
+        <!--<img src="../img/receita-federal-logo.png" alt="logo"/>-->
+        <h4>Carol Cardoso</h4>
+        <span class="br-divider vertical mx-half mx-sm-1"></span>
+        <div class="header-sign">Portfólio</div>
       </div>
       <div class="header-actions">
         <div class="header-links dropdown">
-          <button class="br-button circle small" type="button" data-toggle="dropdown" aria-label="Abrir Acesso Rápido"><i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-          </button>
           <div class="br-list">
-            <div class="header">
-              <div class="title">Acesso Rápido</div>
-            </div><a class="br-item" href="javascript:void(0)">Link de acesso 1</a><a class="br-item" href="javascript:void(0)">Link de acesso 2</a><a class="br-item" href="javascript:void(0)">Link de acesso 3</a><a class="br-item" href="javascript:void(0)">Link de acesso 4</a>
+            <a class="br-button" href="javascript:void(0)">Apresentação</a>
+            <a class="br-button" href="javascript:void(0)">Áreas de atuação</a>
+            <a class="br-button" href="javascript:void(0)">Tecnologias</a>
+            <a class="br-button" href="javascript:void(0)">Blog</a>
           </div>
-        </div><span class="br-divider vertical mx-half mx-sm-1"></span>
-        <div class="header-functions dropdown">
-          <button class="br-button circle small" type="button" data-toggle="dropdown" aria-label="Abrir Funcionalidades do Sistema"><i class="fas fa-th" aria-hidden="true"></i>
-          </button>
-          <div class="br-list">
-              <a class="align-items-center br-item" href="../index.html" rel="pt-BR"><img src="./assets/images/flags/brazil.png" class="flag ml-3" alt="Português" /></a>
-            <div class="align-items-center br-item">
-              <a href="../index.html" rel="pt-BR"><img src="./assets/images/flags/eua.png" class="flag" alt="English" /></a>
-            </div>
-            <div class="align-items-center br-item">
-              <a href="../index.html" rel="pt-BR"><img src="./assets/images/flags/italy.png" class="flag" alt="Italiano" /></a>
-            </div>
-            <button class="br-button circle" type="button" aria-label="Ícone ilustrativo">
-              <a href="../index.html" rel="pt-BR"><img src="./assets/images/flags/italy.png" class="flag" alt="Italiano" /></a>
-            </button>
-          </div>
-          <ul class="br-list">
-            <li class="align-items-center br-item">
-              <a href="../index.html" class="language" rel="pt-BR"><img src="./assets/images/flags/brazil.png" class="flag" alt="Português" /></a>  
-              <a href="../en/index.html" class="language" rel="en-EUA"><img src="./assets/images/flags/eua.png" class="flag" alt="English" /></a>
-              <a href="./index.html" class="language" rel="it-IT"><img src="./assets/images/flags/italy.png" class="flag" alt="Italiano" /></a>
-            </li>
-          </ul>
         </div>
-        <div class="header-search-trigger">
-          <button class="br-button circle" type="button" aria-label="Abrir Busca" data-toggle="search" data-target=".header-search"><i class="fas fa-search" aria-hidden="true"></i>
+        <span class="br-divider vertical mx-half mx-sm-1"></span>
+        <div>
+          <button class="br-button circle medium ml-4" type="button" href="../index.html" rel="pt-BR" style="padding: 8px;">
+            <img src="./assets/images/flags/brazil.png" class="flag text-center align-item-center" alt="Português"/>
+          </button>
+          <button class="br-button circle medium" type="button" href="../en/index.html" rel="en-EUA" style="padding: 8px;">
+            <img src="./assets/images/flags/eua.png" class="flag" alt="English"/> 
+          </button>
+          <button class="br-button circle medium" type="button" href="./index.html" rel="it-IT" style="padding: 8px;">
+            <img src="./assets/images/flags/italy.png" class="flag" alt="Italiano"/>
           </button>
         </div>
+        <div class="buttons">
+         <button class="br-button circle medium" id="toggle" type="button" aria-label="Tema fundo claro">
+          <i class="fa fa-sun" id="icon-light" alt="Ícone fundo claro"></i>
+      </button>
+      <button id="refresh" class="button">refresh</button>  
+        </div>
+         
+
+        <img src="light-image.jpg" alt="Light Mode Image" class="light-img">
+        <img src="dark-image.jpg" alt="Dark Mode Image" class="dark-img" style="display: none;">            
         <div class="header-login">
           <div class="header-avatar d-none">
             <div class="avatar dropdown"><span class="br-avatar" title="Fulano da Silva"><span class="image"><img src="https://picsum.photos/id/823/400" alt="Avatar"/></span></span>

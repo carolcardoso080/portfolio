@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const progressElements = document.querySelectorAll('.progress');
+    const progressoElements = document.querySelectorAll('.progresso');
 
-    progressElements.forEach(progressElement => {
-        const progressValue = progressElement.getAttribute('data-progress');
-        const progressBar = progressElement.querySelector('.progress-bar');
+    progressoElements.forEach(progressoElement => {
+        const progressoValue = progressoElement.getAttribute('data-progresso');
+        const barraProgresso = progressoElement.querySelector('.barra-progresso');
         
-        // Definindo a largura da barra de progresso baseada no data-progress
-        progressBar.style.width = '0%';
+        // Definindo a largura da barra de progresso baseada no data-progresso
+        barraProgresso.style.width = '0%';
 
         // Iniciando a animação após uma pequena pausa para garantir que o CSS seja aplicado
         setTimeout(() => {
-            progressBar.style.transition = 'width 2s ease';
-            progressBar.style.width = progressValue + '%';
+            barraProgresso.style.transition = 'width 2s ease';
+            barraProgresso.style.width = progressoValue + '%';
         }, 100);
     });
 });

@@ -32,13 +32,14 @@
 	max-height: 25px;
 	max-width: 25px;
 	margin-top: auto;
-    margin-right: 4px;
-    margin-left: 4px;
-    text-align: center;
-    justify-content: center;
-    justify-self: center;
-    align-items: center;
+  margin-right: 4px;
+  margin-left: 4px;
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
 }
+
 
 :root {
   --progress-duration: 2s; /* Duração da animação */
@@ -46,10 +47,16 @@
 
 /* Sobre mim */
 
+.secao-container{
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
 .secao-titulo{
+  margin-bottom: 25px;
   font-weight: bold;
-  font-size: 40px;
-  color: #7d7d7d;
+  font-size: 35px;
+  color: #333333;
   text-align: center;
   justify-content: center;
   justify-self: center;
@@ -57,44 +64,133 @@
 }
 
 .secao-descricao{
+  margin-bottom: 80px;
   font-weight: normal;
-  font-size: 25px;
-  color: #7d7d7d;
+  font-size: 18px;
+  color: #333333;
   text-align: center;
   justify-content: center;
   justify-self: center;
   align-items: center;
 }
 
-.secao-conteudo-esquerda{
+.paragrafo{
   font-weight: normal;
-  font-size: 25px;
-  color: #7d7d7d;
+  font-size: 16px;
+  color: #333333;
   text-align: left;
   justify-content: left;
   justify-self: left;
   align-items: left;
-  column-width: 50%;
 }
 
-.progress {
-  height: 15px;
-  background-color: #777;
+.texto-direita{
+  text-align: right;
+}
+
+.texto-esquerda{
+  text-align: left;
+}
+
+.titulo-barra:first-child{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+}
+
+.titulo-barra{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2500px;
+}
+
+.progresso {
+  height: 9px;
+  background-color: #e1e1e1;
   position: relative;
   border-radius: 7.5px; /* Arredonda as bordas do contêiner */
   overflow: hidden; /* Garante que a barra de progresso não saia do contêiner */
 }
 
-.progress .progress-bar {
+.progresso .barra-progresso {
   position: absolute;
   height: 100%;
-  background-color: #add555;
+  background-color: #1351B4;
   width: 0;
   border-radius: 7.5px; /* Arredonda as bordas da barra de progresso */
 }
 
-@keyframes progress-animation {
+@keyframes progresso-animation {
   0% { width: 0%; }
-  100% { width: var(--progress-width); }
+  100% { width: var(--progresso-width); }
+}
+
+.icone-midia-social{
+  color: #333333;
+}
+
+.icone-midia-social:hover{
+  background-color: rgb(51, 51, 51, 0.2);
+}
+  
+.lista-midia-social{
+  margin-left: -12px;
+}
+
+/* Blog */
+
+.container-card{
+  padding: 20px;
+  width: fit-content;
+}
+
+.br-card{
+ height: fit-content;
+ width: 400px;
+}
+
+.hover:hover{
+  background-color: #1351B4;
+  color: white;
+ }
+
+ .container-avatar{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+.avatar-card{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+}
+
+.span-icone{
+  position: relative;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  padding: 5px; /* Add some padding for better click area */
+}
+
+.titulo-card, .subtitulo-card{
+  /*font-size: 20px;
+  font-weight: 600;*/
+  text-align: left;
+  justify-content: left;
+  justify-self: left;
+  align-items: left;
+}
+
+.imagem-card{
+  text-align: left;
+  justify-content: left;
+  justify-self: left;
+  align-items: left;
+  height: 250px;
 }
 

@@ -197,11 +197,18 @@
 .botao-habilidades{
   min-width: 100px; /* Largura do botão */
   min-height: 100px; /* Altura do botão */
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .botao-habilidades i{
   font-size: 50px; /* Aumenta o tamanho do ícone */
   padding-right: 50px;
+  transition: color 0.3s;
 }
 
 .hover:hover .icone-habilidades {
@@ -216,4 +223,20 @@
   color: #1351B4;
 }
 
+/* Initial state of the shine effect */
+.shiny-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-100%, -100%) rotate(45deg);
+  transition: transform 1s ease;
+}
 
+/* Activated state of the shine effect */
+.shiny-button.shine::before {
+  transform: translate(100%, 100%) rotate(45deg);
+}

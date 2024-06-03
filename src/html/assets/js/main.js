@@ -15,3 +15,28 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 100);
     });
 });
+
+// Function to add the shine effect
+function addShineEffect(buttons) {
+    buttons.forEach(button => button.classList.add('shine'));
+    
+    // Remove the shine effect after 1 second (to match the transition duration)
+    setTimeout(() => {
+      buttons.forEach(button => button.classList.remove('shine'));
+    }, 1000); // Adjust this to match the CSS transition duration
+  }
+  
+  // Function to repeatedly add the shine effect every 5 seconds to all buttons
+  function startShineLoop() {
+    const buttons = document.querySelectorAll('.shiny-button');
+    
+    // Add initial shine effect immediately
+    addShineEffect(buttons);
+    
+    // Repeat every 5 seconds
+    setInterval(() => addShineEffect(buttons), 5000);
+  }
+  
+  // Start the shine loop when the page is loaded
+  window.addEventListener('load', startShineLoop);
+  

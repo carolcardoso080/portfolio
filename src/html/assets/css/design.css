@@ -1,35 +1,38 @@
 .br-header {
-  position: static;
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 10; /* Certifique-se de que o cabeçalho está na frente */
   background-color: rgba(0, 0, 0, 0.1); /* Inicialmente transparente */
   transition: background-color 0.3s ease; /* Suaviza a transição da cor de fundo */
   color: #fff;
 }
 
-/* Não precisa desse código, já que o Js faz essa alteração
-.header-logo h4, .br-list a, .header-sign{
+.header-logo h4, .br-list a, .header-sign h6{
   color: white;
   transition: color 0.3s ease; 
-} */
+} 
 
 
 .container-video {
-    /*Ajuste a largura e altura desejadas aqui*/
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100vh; /* Ajusta a altura do banner conforme necessário */
+    height: 100%; /* Ajusta a altura do banner conforme necessário */
+    z-index: 5; /* Certifique-se de que o banner está atrás do cabeçalho */
     background: no-repeat center center;
     background-size: cover;
-    z-index: 0; /* Garante que o banner esteja atrás do header */
+    margin-top: 0;
   }
 
 .container-video > .bg-video{
+    top: 0;
     padding: 0;
     overflow-x: hidden; /* Esconde o scroll horizontal */
     background-size: cover; /* Ajusta a imagem para cobrir o fundo sem distorção */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
     background-position: center; /* Centraliza a imagem no fundo */
+    margin-top: 0;
 }
 
 .container-video > .bg-video > video {
@@ -38,43 +41,58 @@
     justify-content: center;
     justify-self: center;
     align-items: center;
-    height: 850px;
+    width: 100%;
+    height: 100%;
     margin-top: 0;
+    top: 0;
 }
 
-@media (min-width: 575px){
+.template-base{
+  position: relative;
+  z-index: 0;
+  padding-top: 350px;
+}
+
+@media (max-width: 1600px){
+
 
   .template-base{
-    margin-top: 110vh; /* Garante que o conteúdo comece após o banner */
+    margin-top: 35vh;
   }
 
 }
 
-@media (max-width: 991px){
+@media (max-width: 1280px){
 
-  .container-video > .bg-video > video{
-    width: 130%;
-    margin-top: -200px;
-  }
 
   .template-base{
-    margin-top: 60vh; /* Garante que o conteúdo comece após o banner */
+    margin-top: 22vh;
   }
 
 }
 
-@media (max-width: 575px){
-
-  .container-video > .bg-video > video{
-    width: 130%;
-    margin-top: -250px;
-  }
+@media (max-width: 992px){
 
   .template-base{
-    margin-top: 40vh; /* Garante que o conteúdo comece após o banner */
+    margin-top: 2vh;
   }
-
 }
+
+
+@media (max-width: 720px){
+
+  .template-base{
+    margin-top: -15vh;
+  }
+}
+
+@media (max-width: 576px){
+  
+  .template-base{
+    margin-top: -20vh;
+  }
+}
+
 
 .flag{
 	max-height: 25px;

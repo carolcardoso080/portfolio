@@ -39,27 +39,38 @@ function addShineEffect(buttons) {
   
   // Start the shine loop when the page is loaded
   window.addEventListener('load', startShineLoop);
+  
+// Header sticky 
 
-  // Header sticky 
-
-  document.addEventListener('scroll', function() {
-    const header = document.querySelector('.br-header');
-    const introducao = document.getElementById('introducao');
-    const introducaoPosition = introducao.getBoundingClientRect().top;
-    
-    const headerLogoTexto = document.querySelector('.header-logo h4');
-    const headerDescricao = document.querySelector('.header-sign');
-    const navLinks = document.querySelectorAll('.br-list a');
-
-    if (introducaoPosition <= 0) {
-        header.style.backgroundColor = 'rgba(255, 255, 255, 1)'; // Fundo branco
-        headerLogoTexto.style.color = '#333333'; // Reseta para a cor padrão
-        headerDescricao.style.color = '#333333'; // Reseta para a cor padrão
-        navLinks.forEach(link => link.style.color = '#333333'); // Reseta para a cor padrão
-    } else {
-        header.style.backgroundColor = 'rgba(0, 0, 0, 0.1)'; // Transparente
-        headerLogoTexto.style.color = '#fff'; // Texto branco
-        headerDescricao.style.color = '#fff'; // Texto branco
-        navLinks.forEach(link => link.style.color = '#fff'); // Texto branco
-    }
+document.addEventListener('DOMContentLoaded', function() {
+  updateHeaderStyles();
 });
+
+document.addEventListener('scroll', function() {
+  updateHeaderStyles();
+});
+
+function updateHeaderStyles() {
+  const header = document.querySelector('.br-header');
+  const introducao = document.getElementById('introducao');
+  const introducaoPosition = introducao.getBoundingClientRect().top;
+  
+  const headerLogoTexto = document.querySelector('.header-logo h4');
+  const headerDescricao = document.querySelector('.header-sign h6');
+  const navLinks = document.querySelectorAll('.br-list a');
+
+  if (introducaoPosition <= 0) {
+      header.style.backgroundColor = 'rgba(255, 255, 255, 1)'; // Fundo branco
+      headerLogoTexto.style.color = '#333333'; // Reseta para a cor padrão
+      headerDescricao.style.color = '#333333'; // Reseta para a cor padrão
+      navLinks.forEach(link => link.style.color = '#333333'); // Reseta para a cor padrão
+  } else {
+      header.style.backgroundColor = 'rgba(0, 0, 0, 0.1)'; // Transparente
+      headerLogoTexto.style.color = '#fff'; // Texto branco
+      headerDescricao.style.color = '#fff'; // Texto branco
+      navLinks.forEach(link => link.style.color = '#fff'); // Texto branco
+  }
+}
+
+
+  

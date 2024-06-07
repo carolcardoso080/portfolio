@@ -22,12 +22,12 @@ Promise.all([promessa_carregou_head, promessa_carregou_header, promessa_carregou
 
   let script_core = document.createElement("script");
   script_core.type = "module";
-  script_core.src = "../../bibliotecas/govbr-ds/core.js";
+  script_core.src = "./bibliotecas/govbr-ds/core.js";
 
   body.appendChild(script_core);
 
   let script_core_init = document.createElement("script");
-  script_core_init.src = "../../bibliotecas/govbr-ds/core-init.js";
+  script_core_init.src = "./bibliotecas/govbr-ds/core-init.js";
 
   body.appendChild(script_core_init);
 });

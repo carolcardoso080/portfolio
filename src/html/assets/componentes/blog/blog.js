@@ -18,39 +18,39 @@ function carregarHTML(url, id, callback) {
         });
 }
 
-export class HeaderPtBr extends HTMLElement {
+export class BlogPtBr extends HTMLElement {
     constructor() {
         super();
-        console.log("Constructor do HeaderPtBr");
-        carregarHTML('./assets/componentes/header/header.html', 'header-pt-br', conteudo => {
+        console.log("Constructor do BlogPtBr");
+        carregarHTML('./assets/componentes/blog/blog.html', 'blog-pt-br', conteudo => {
             this.appendChild(conteudo);
             this.dispatchEvent(new CustomEvent("carregou"));
         });
     }
 }
 
-export class HeaderEn extends HTMLElement {
+export class BlogEn extends HTMLElement {
     constructor() {
         super();
-        console.log("Constructor do HeaderEn");
-        carregarHTML('./assets/componentes/header/header.html', 'header-en', conteudo => {
+        console.log("Constructor do BlogEn");
+        carregarHTML('./assets/componentes/blog/blog.html', 'blog-en', conteudo => {
             this.appendChild(conteudo);
             this.dispatchEvent(new CustomEvent("carregou"));
         });
     }
 }
 
-export class HeaderIt extends HTMLElement {
+export class BlogIt extends HTMLElement {
     constructor() {
         super();
-        console.log("Constructor do HeaderEs");
-        carregarHTML('./assets/componentes/header/header.html', 'header-it', conteudo => {
+        console.log("Constructor do BlogEs");
+        carregarHTML('./assets/componentes/blog/blog.html', 'blog-it', conteudo => {
             this.appendChild(conteudo);
             this.dispatchEvent(new CustomEvent("carregou"));
         });
     }
 }
 
-customElements.define('br-header-pt-br', HeaderPtBr);
-customElements.define('br-header-en', HeaderEn);
-customElements.define('br-header-it', HeaderIt);
+customElements.define('br-blog-pt-br', BlogPtBr);
+customElements.define('br-blog-en', BlogEn);
+customElements.define('br-blog-it', BlogIt);

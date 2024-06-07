@@ -18,39 +18,39 @@ function carregarHTML(url, id, callback) {
         });
 }
 
-export class HeaderPtBr extends HTMLElement {
+export class HabilidadesPtBr extends HTMLElement {
     constructor() {
         super();
-        console.log("Constructor do HeaderPtBr");
-        carregarHTML('./assets/componentes/header/header.html', 'header-pt-br', conteudo => {
+        console.log("Constructor do HabilidadesPtBr");
+        carregarHTML('./assets/componentes/habilidades/habilidades.html', 'habilidades-pt-br', conteudo => {
             this.appendChild(conteudo);
             this.dispatchEvent(new CustomEvent("carregou"));
         });
     }
 }
 
-export class HeaderEn extends HTMLElement {
+export class HabilidadesEn extends HTMLElement {
     constructor() {
         super();
-        console.log("Constructor do HeaderEn");
-        carregarHTML('./assets/componentes/header/header.html', 'header-en', conteudo => {
+        console.log("Constructor do HabilidadesEn");
+        carregarHTML('./assets/componentes/habilidades/habilidades.html', 'habilidades-en', conteudo => {
             this.appendChild(conteudo);
             this.dispatchEvent(new CustomEvent("carregou"));
         });
     }
 }
 
-export class HeaderIt extends HTMLElement {
+export class HabilidadesIt extends HTMLElement {
     constructor() {
         super();
-        console.log("Constructor do HeaderEs");
-        carregarHTML('./assets/componentes/header/header.html', 'header-it', conteudo => {
+        console.log("Constructor do HabilidadesEs");
+        carregarHTML('./assets/componentes/habilidades/habilidades.html', 'habilidades-it', conteudo => {
             this.appendChild(conteudo);
             this.dispatchEvent(new CustomEvent("carregou"));
         });
     }
 }
 
-customElements.define('br-header-pt-br', HeaderPtBr);
-customElements.define('br-header-en', HeaderEn);
-customElements.define('br-header-it', HeaderIt);
+customElements.define('br-habilidades-pt-br', HabilidadesPtBr);
+customElements.define('br-habilidades-en', HabilidadesEn);
+customElements.define('br-habilidades-it', HabilidadesIt);

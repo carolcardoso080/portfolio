@@ -1,20 +1,35 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const progressoElements = document.querySelectorAll('.progresso');
+window.addEventListener("load", function() {
+  const progressoElements = document.querySelectorAll('.progresso');
 
-    progressoElements.forEach(progressoElement => {
-        const progressoValue = progressoElement.getAttribute('data-progresso');
-        const barraProgresso = progressoElement.querySelector('.barra-progresso');
-        
-        // Definindo a largura da barra de progresso baseada no data-progresso
-        barraProgresso.style.width = '0%';
+  progressoElements.forEach(progressoElement => {
+      const progressoValue = progressoElement.getAttribute('data-progresso');
+      const barraProgresso = progressoElement.querySelector('.barra-progresso');
+      
+      // Definindo a largura da barra de progresso baseada no data-progresso
+      barraProgresso.style.width = '0%';
+  });
 
-        // Iniciando a animação após uma pequena pausa para garantir que o CSS seja aplicado
-        setTimeout(() => {
-            barraProgresso.style.transition = 'width 2s ease';
-            barraProgresso.style.width = progressoValue + '%';
-        }, 100);
-    });
+  // Emitir evento personalizado quando o conteúdo é carregado
+  const carregouEvento = new Event('carregou');
+  document.dispatchEvent(carregouEvento);
 });
+
+document.addEventListener("carregou", function() {
+  // Agora que o conteúdo foi carregado, iniciar a animação
+  const progressoElements = document.querySelectorAll('.progresso');
+
+  progressoElements.forEach(progressoElement => {
+      const progressoValue = progressoElement.getAttribute('data-progresso');
+      const barraProgresso = progressoElement.querySelector('.barra-progresso');
+
+      // Iniciando a animação após uma pequena pausa para garantir que o CSS seja aplicado
+      setTimeout(() => {
+          barraProgresso.style.transition = 'width 2s ease';
+          barraProgresso.style.width = progressoValue + '%';
+      }, 100);
+  });
+});
+
 
 // Function to add the shine effect
 function addShineEffect(buttons) {

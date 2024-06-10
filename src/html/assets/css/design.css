@@ -215,8 +215,47 @@
 
 /* Experiência internacional */
 
+.wizard-panel > .wizard-panel-content{
+  border-top: none;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 20px;
+  text-align: left;
+  justify-content: left;
+  justify-self: left;
+  align-items: left;
+}
+
 .wizard-progress-btn{
   color: #1351B4;
+}
+
+.video-flag{
+  height: 250px;
+  border-radius: 5%;
+  margin-top: 40px;
+  margin-right: 50px;
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+}
+
+.estados{
+  margin-top: 40px;
+  margin-left: 0;
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+}
+
+.icone-estado{
+  height: 100px;
+  text-align: left;
+  justify-content: left;
+  justify-self: left;
+  align-items: left;
 }
 
 /* Blog */

@@ -233,8 +233,7 @@
 .video-flag{
   height: 250px;
   border-radius: 5%;
-  margin-top: 40px;
-  margin-right: 50px;
+  margin-top: 20px;
   text-align: center;
   justify-content: center;
   justify-self: center;
@@ -242,8 +241,9 @@
 }
 
 .estados{
-  margin-top: 40px;
-  margin-left: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
   text-align: center;
   justify-content: center;
   justify-self: center;
@@ -252,10 +252,13 @@
 
 .icone-estado{
   height: 100px;
-  text-align: left;
-  justify-content: left;
-  justify-self: left;
-  align-items: left;
+  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
 }
 
 /* Blog */

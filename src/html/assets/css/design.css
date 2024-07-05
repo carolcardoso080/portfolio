@@ -113,6 +113,10 @@
 
 /* Sobre mim */
 
+.education{
+ margin-left: -15px;
+}
+
 .secao-container{
   margin-top: 50px;
   margin-bottom: 50px;
@@ -201,6 +205,17 @@
   100% { width: var(--progresso-width); }
 }
 
+@media (max-width: 600px) {
+  .progresso {
+    height: 7px; /* Ajuste conforme necessário */
+  }
+
+  .progresso .barra-progresso {
+    height: 100%;
+  }
+}
+
+
 .icone-midia-social{
   color: #333333;
 }
@@ -212,6 +227,15 @@
 .lista-midia-social{
   margin-left: -12px;
 }
+
+@media (max-width: 575px) {
+  
+  .container-progresso{
+    margin-left: 10px;
+    margin-right: 10px;
+   }
+}
+
 
 /* Experiência internacional */
 
@@ -271,6 +295,14 @@
 .br-card{
  height: fit-content;
  width: 400px;
+}
+
+@media (max-width: 500px) {
+  
+  .timeline .br-card{
+    height: fit-content;
+    width: fit-content;
+   }
 }
 
 .hover:hover{
@@ -406,37 +438,17 @@
   position: relative;
 }
 
-.timeline .timeline-title {
-  font-size: 20px;
-  margin-left: 25px;
-}
-
 .timeline li {
   padding: 0 20px 20px 30px;
   list-style: none;
   border-left: 2px solid #f1f1f1;
 }
 
-.timeline li .content-text {
-  background: #f2f2f2;
-  padding: 20px;
-}
-
-.timeline li .line-title {
-  font-size: 16px;
-  line-height: 6px;
-}
-
-.timeline li span {
+/* .timeline li span {
   font-size: 12px;
   padding: 9px 0;
   display: block;
-}
-
-.timeline li .line-text {
-  color: #888;
-  line-height: 18px;
-}
+} */
 
 .timeline li:first-child:before {
   border: 0;

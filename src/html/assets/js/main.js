@@ -20,6 +20,7 @@ document.addEventListener("carregou", function() {
 
   progressoElements.forEach(progressoElement => {
       const progressoValue = progressoElement.getAttribute('data-progresso');
+      console.log(`Progresso Value: ${progressoValue}`); // Adicione este log
       const barraProgresso = progressoElement.querySelector('.barra-progresso');
 
       // Iniciando a animação após uma pequena pausa para garantir que o CSS seja aplicado
@@ -29,6 +30,7 @@ document.addEventListener("carregou", function() {
       }, 100);
   });
 });
+
 
 
 // Function to add the shine effect

@@ -54,3 +54,4 @@ export class IntroducaoIt extends HTMLElement {
 customElements.define('br-introducao-pt-br', IntroducaoPtBr);
 customElements.define('br-introducao-en', IntroducaoEn);
 customElements.define('br-introducao-it', IntroducaoIt);
+
